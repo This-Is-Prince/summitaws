@@ -28,7 +28,7 @@ app.post("/get-presigned-url", async (req, res) => {
             expiresIn: 300,
         });
 
-        console.log(`✅ Generated presigned URL fro ${key}`);
+        console.log(`✅ Generated presigned URL from ${key}`);
         
         res.status(200).json({ uploadUrl, key });
     } catch (error) {
