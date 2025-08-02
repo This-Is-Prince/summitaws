@@ -15,7 +15,7 @@ app.post("/get-presigned-url", async (req, res) => {
         return res.status(400).json({ error: "filename and fileType are required." });
     }
 
-    const key = `uploads/presigned/${Date.now()}_${fileName}`;
+    const key = `uploads_lambda/presigned/${Date.now()}_${fileName}`;
 
     const command = new PutObjectCommand({
         Bucket: BUCKET_NAME,
